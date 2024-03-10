@@ -16,6 +16,10 @@ app.use(limiter);
 
 app.use("/api/v1/", routes);
 
+app.get("/",async(req,res)=>{
+      res.send("Welcome to Social Network API");  
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 })
